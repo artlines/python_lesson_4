@@ -14,10 +14,6 @@ def get_names(names, count):
     return names_new
 
 
-print(get_names(names_list, 100))
-names_range = get_names(names_list, 100)
-
-
 def get_count(names):
     names_count = dict.fromkeys(names, 0)
     for name in names:
@@ -37,9 +33,6 @@ def get_name_most_often(names):
     return name_most_often[0], names_count_most_often
 
 
-print(get_name_most_often(names_range))
-
-
 # 3
 def get_rarely_letter(names):
     letters = [i[0] for i in names]
@@ -48,9 +41,6 @@ def get_rarely_letter(names):
     letter_most_rarely = [key for (key, value) in letters_count.items() if value == letters_count_most_rarely]
 
     return letter_most_rarely[0], letters_count_most_rarely
-
-
-print(get_rarely_letter(names_range))
 
 
 # 4
@@ -62,5 +52,3 @@ def get_latest_log(logs):
 
     return max([c for c in dates])
 
-
-print(get_latest_log('log'))
